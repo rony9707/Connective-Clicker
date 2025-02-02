@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 
 //Use dot env
-frontEndConnectionString = process.env.frontEndConnectionString
+frontEndConnectionString = process.env.frontEndConnectionString || "https://connectiveclicker.web.app"
 
 let onlineUsers = [];  // Track connected users
 console.log(frontEndConnectionString)
