@@ -23,9 +23,12 @@ const io = new Server(server, {
 
 // CORS middleware for HTTP requests
 app.use(cors({
-  origin: frontEndConnectionString,  // Allow Angular frontend to communicate with this backend
-  credentials: true,
+  origin: frontEndConnectionString,  
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+  credentials: true
 }));
+
 
 // Socket.io event listener
 io.on('connection', (client) => {
