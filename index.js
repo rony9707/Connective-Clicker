@@ -11,7 +11,7 @@ const server = http.createServer(app);
 frontEndConnectionString = process.env.frontEndConnectionString
 
 let onlineUsers = [];  // Track connected users
-
+console.log(frontEndConnectionString)
 // Socket.io CORS options
 const io = new Server(server, {
   cors: {
