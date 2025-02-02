@@ -17,7 +17,8 @@ const io = new Server(server, {
   cors: {
     origin: frontEndConnectionString,  // Allow Angular frontend to communicate with this backend
     credentials: true,
-  }
+  },
+  transports: ["polling", "websocket"]
 });
 
 // CORS middleware for HTTP requests
